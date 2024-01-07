@@ -1,0 +1,23 @@
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+hover.actions.references.enable = true
+assist.importGranularity = "module" # how imports should be group into `use` statemens
+
+lens.references.adt.enable = true
+lens.references.enumVariant.enable = true
+lens.references.method.enable = true
+lens.references.trait.enable = true
+
+completion.fullFunctionSignatures.enable = true
+
+inlayHints.closingBraceHints.minLines = 1
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+
+lruCapacity = 256
+workspace.symbol.search.limit = 128
+workspace.symbol.search.kind = "all_symbols"
+workspace.symbol.search.scope = "workspace_and_dependencies"
+
+diagnostics.disabled = ["unresolved-proc-macro"]

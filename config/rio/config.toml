@@ -1,0 +1,29 @@
+theme = "catppuccin-macchiato"
+
+editor = 'hx'
+
+# Other available options are: '_' and '|' and '█'
+cursor = '|'
+
+blinking-cursor = true
+hide-cursor-when-typing = false
+
+# Set WGPU rendering performance
+# High: Adapter that has the highest performance. This is often a discrete GPU.
+# Low: Adapter that uses the least possible power. This is often an integrated GPU.
+performance = "High"
+
+[shell]
+program = "nu"
+args = ["--login"]
+
+[fonts]
+family = "FantasqueSansM Nerd Font"
+size = 20
+
+[navigation]
+mode = "CollapsedTab"
+
+color-automation = [
+  { program = "hx", color = "#EED49F" },
+]

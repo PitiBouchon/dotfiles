@@ -1,0 +1,64 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+line-number = "relative"
+color-modes = true
+completion-replace = true
+cursorline = true
+idle-timeout = 100
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-inlay-hints = true
+auto-signature-help = true
+
+[editor.file-picker]
+hidden = false # ignoring hidden files
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.indent-guides]
+render = true
+character = "▏"
+
+[editor.statusline]
+left = [
+    "mode",
+    "spinner",
+    "file-name",
+    "read-only-indicator",
+    "file-modification-indicator",
+    # "spacer",
+    "diagnostics",
+    "spacer",
+    "register",
+]
+center = [
+    "version-control",
+    "workspace-diagnostics",
+]
+right = [
+    "file-encoding",
+    "file-type",
+    "separator",
+    # "selections",
+    # "separator",
+    "primary-selection-length",
+    "separator",
+    "position",
+    "separator",
+    "spacer",
+    "position-percentage",
+    "total-line-numbers",
+]
+
+[keys.normal.space]
+n = "file_picker_in_current_buffer_directory"
+

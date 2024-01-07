@@ -1,0 +1,27 @@
+unmapAll
+
+# Navigation
+map ? showHelp
+map h scrollLeft
+map j scrollDown
+map k scrollUp
+map h scrollRight
+map <c-d> scrollPageDown
+map <c-u> scrollPageUp
+map ge scrollToBottom
+map gg scrollToTop
+
+# Tabs
+map << moveTabLeft
+map >> moveTabRight
+
+# Links
+map f LinkHints.activateMode
+map F LinkHints.activateModeToOpenInNewTab
+map yy copyCurrentUrl
+
+# Find
+map / enterFindMode
+map n performFind
+map N performBackwardsFind
+map <space> Vomnibar.activateTabSelection
