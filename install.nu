@@ -4,15 +4,15 @@ if (which cargo | is-empty) {
 }
 
 # cargo install nu # Sould be installed
-cargo install rioterm
-cargo install starship
-cargo install bat
-cargo install fd-find
-cargo install ripgrep
-cargo install tealdeer
-cargo install du-dust
-cargo install git-delta
-cargo install difftastic
+cargo install rioterm --locked
+# cargo install starship --locked (need cmake and other things)
+cargo install bat --locked
+cargo install fd-find --locked
+cargo install ripgrep --locked
+cargo install tealdeer --locked
+cargo install du-dust --locked
+cargo install git-delta --locked
+cargo install difftastic --locked
 
 if (which hx | is-empty) {
   echo "Install Helix manually"
