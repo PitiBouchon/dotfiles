@@ -33,6 +33,7 @@ cargo install difftastic --locked
 # lsp
 cargo install taplo-cli --locked # toml
 rustup component add rust-analyzer # rust
+cargo install --git https://github.com/wgsl-analyzer/wgsl-analyzer wgsl_analyzer # wgsl
 
 
 if $nu.os-info.name != "windows" {
