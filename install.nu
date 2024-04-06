@@ -2,26 +2,41 @@ if (which cargo | is-empty) {
   echo "Install cargo manually"
   exit 1
 }
+if (which rustup | is-empty) {
+  echo "Install rustup manually"
+  exit 1
+}
 
+# tools
 # cargo install nu # Sould be installed
-cargo install rioterm --locked
 # cargo install starship --locked (need cmake and other things)
-cargo install bat --locked
-cargo install fd-find --locked
-cargo install ripgrep --locked
-cargo install tealdeer --locked
-cargo install du-dust --locked
-cargo install git-delta --locked
-cargo install difftastic --locked
+cargo install rioterm --locked
 
 if (which hx | is-empty) {
   echo "Install Helix manually"
 }
 
+# cli
+cargo install bat --locked
+cargo install fd-find --locked
+cargo install ripgrep --locked
+cargo install tealdeer --locked
+cargo install du-dust --locked
+
+## git
 if (which git | is-empty) {
   echo "Install git manually"
 }
+cargo install git-delta --locked
+cargo install difftastic --locked
 
-if (which fish | is-empty) {
-  echo "Install fish manually (used for autocompletion)"
+# lsp
+cargo install taplo-cli --locked # toml
+rustup component add rust-analyzer # rust
+
+
+if $nu.os-info.name != "windows" {
+  if (which fish | is-empty) {
+    echo "Install fish manually (used for autocompletion)"
+  }
 }
