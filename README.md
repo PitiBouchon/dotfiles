@@ -1,14 +1,14 @@
 # Config Files
 
-## Install
+## Installation
 
-To install the packages, install `nu` *(`cargo install nu`)* and run `nu install.nu`
+To install / update the tools, install `nu` *(`cargo install nu`)* and run `nu install.nu`
 
-To install the configs, run `nu update_<os>.nu`
+To set the configs, run `nu update_<os>.nu`
 
-*Install FantasqueSansM Nerd Font [nerdfonts](https://www.nerdfonts.com/font-downloads)*
+I use the *FantasqueSansM Nerd Font [nerdfonts](https://www.nerdfonts.com/font-downloads)* (set in the Rio config)
 
-> Configs are in `~/.config/` (on Linux and MacOs) and in `%APPDATA%\` or `%LOCALAPPDATA%\` on Windows
+> Some configs are in `~/.config/` (on Linux and MacOs) and in `%APPDATA%\` or `%LOCALAPPDATA%\` on Windows
 
 ## Development
 

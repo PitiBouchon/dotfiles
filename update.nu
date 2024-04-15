@@ -1,4 +1,4 @@
-# Will overwrites config
+# ! Will overwrites config !
 
 mkdir ~/.config
 
@@ -19,12 +19,14 @@ if $nu.os-info.name == "windows" {
   cp -r config/helix ~/.config
 }
 
+# Git
 nu config/git/update.nu
 
+# Nushell
 if $nu.os-info.name == "windows" {
   cp -r config/nushell $env.APPDATA
 } else {
   cp -r config/nushell ~/.config
 }
 
-echo "Manually update Firefox Vimium"
+echo "Manually update Firefox extensions"
