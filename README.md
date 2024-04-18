@@ -4,7 +4,7 @@
 
 To install / update the tools, install `nu` *(`cargo install nu`)* and run `nu install.nu`
 
-To set the configs, run `nu update_<os>.nu`
+To set the configs, run `nu update.nu`
 
 I use the *FantasqueSansM Nerd Font [nerdfonts](https://www.nerdfonts.com/font-downloads)* (set in the Rio config)
 
