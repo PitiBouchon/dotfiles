@@ -4,7 +4,7 @@ mkdir ~/.config
 
 # Alacritty
 if $nu.os-info.name == "windows" {
-  cp -r config/alacritty $env.LOCALAPPDATA
+  cp -r config/alacritty $env.APPDATA
 } else {
   cp -r config/alacritty ~/.config
 }

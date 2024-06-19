@@ -50,6 +50,7 @@ cargo install du-dust
 if (which git | is-empty) {
   print "Install git manually"
 }
+## may not work on windows
 cargo install git-delta
 cargo install difftastic
 
