@@ -6,13 +6,14 @@ To install / update the tools, install `nu` *(`cargo install nu`)* and run `nu i
 
 To set the configs, run `nu update.nu`
 
-I use the *FantasqueSansM Nerd Font [nerdfonts](https://www.nerdfonts.com/font-downloads)* (set in the Rio config)
+I use the *FantasqueSansM Nerd Font Mono [nerdfonts](https://www.nerdfonts.com/font-downloads)* (set in the Alacritty config)
 
 > Some configs are in `~/.config/` (on Linux and MacOs) and in `%APPDATA%\` or `%LOCALAPPDATA%\` on Windows
 
 ## Development
 
-- **Terminal**: [rio](https://github.com/raphamorim/rio)
+- **Terminal**: [alacritty](https://github.com/alacritty/alacritty) (also follow [rio](https://github.com/raphamorim/rio))
+  - **Multiplexer**: will look at [zellij](https://github.com/zellij-org/zellij) (but does not work well with nushell and does not run windows)
 - **Shell**: [nushell](https://github.com/nushell/nushell)
   - **Customization**: [starship](https://github.com/starship)
 - **IDE**: [Helix](https://helix-editor.com)

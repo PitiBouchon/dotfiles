@@ -1,23 +1,42 @@
 if (which cargo | is-empty) {
-  echo "Install cargo manually"
+  print "Install cargo manually"
   exit 1
 }
 if (which rustc | is-empty) {
-  echo "Install rustc manually"
+  print "Install rustc manually"
   exit 1
 }
 if (which rustup | is-empty) {
-  echo "Install rustup manually"
+  print "Install rustup manually"
   exit 1
 }
 
 # tools
-# cargo install nu # Sould be installed
+# cargo install nu
+cargo install alacritty
+# if $nu.os-info.name != "windows" { cargo install zellij }
 cargo install starship --no-default-features --features "battery notify gix-faster" # So it does not need cmake to install
-cargo install rioterm
 
-if (which hx | is-empty) {
-  echo "Install Helix manually"
+## helix
+cargo install --git https://github.com/helix-editor/helix helix-term
+
+let helix_config_path = if $nu.os-info.name == "windows" {
+  ($env.APPDATA | path join helix/)
+} else {
+  (["/home", $env.USER, ".config/helix/"] | path join)
+}
+
+if not ($helix_config_path | path join runtime/grammars | path exists) {
+  print "Fetching and building grammar"
+  hx --grammar fetch
+  hx --grammar build
+}
+
+if not ($helix_config_path | path join runtime/queries | path exists) {
+  print "Getting helix queries and themes"
+  git clone https://github.com/helix-editor/helix
+  cp -r ([$env.PWD, "helix/runtime/"] | path join) $helix_config_path
+  rm -rf ([$env.PWD, "helix"] | path join)
 }
 
 # cli
@@ -29,7 +48,7 @@ cargo install du-dust
 
 ## git
 if (which git | is-empty) {
-  echo "Install git manually"
+  print "Install git manually"
 }
 cargo install git-delta
 cargo install difftastic
@@ -41,6 +60,6 @@ cargo install --git https://github.com/wgsl-analyzer/wgsl-analyzer wgsl_analyzer
 
 if $nu.os-info.name != "windows" {
   if (which fish | is-empty) {
-    echo "You may install fish manually (used for autocompletion)"
+    print "You may install fish manually (used for autocompletion)"
   }
 }

@@ -1,0 +1,10 @@
+import = ["~/.config/alacritty/catppuccin-macchiato.toml",]
+
+shell = { program = "nu", args = ["--login",] }
+
+[font]
+normal = { family = "FantasqueSansM Nerd Font Mono", style = "Regular" }
+size = 20
+
+[cursor]
+style = { shape = "Beam", blinking = "Always" }

@@ -14,6 +14,7 @@ map gg scrollToTop
 # Tabs
 map << moveTabLeft
 map >> moveTabRight
+map <a-p> togglePinTab
 
 # Links
 map f LinkHints.activateMode

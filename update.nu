@@ -2,12 +2,17 @@
 
 mkdir ~/.config
 
-# Rio
+# Alacritty
 if $nu.os-info.name == "windows" {
-  cp -r config/rio $env.LOCALAPPDATA
+  cp -r config/alacritty $env.LOCALAPPDATA
 } else {
-  cp -r config/rio ~/.config
+  cp -r config/alacritty ~/.config
 }
+
+# Zellij
+# if $nu.os-info.name != "windows" {
+#   cp -r config/zellij ~/.config
+# }
 
 # Starship
 cp config/starship/starship.toml ~/.config/starship.toml
@@ -29,4 +34,4 @@ if $nu.os-info.name == "windows" {
   cp -r config/nushell ~/.config
 }
 
-echo "Manually update Firefox extensions"
+print "Manually update Firefox extensions"
