@@ -5,7 +5,7 @@ mkdir ~/.config
 # Alacritty
 if $nu.os-info.name == "windows" {
   cp -r config/alacritty $env.APPDATA
-} else {
+} else if $nu.os-info.name != "android" {
   cp -r config/alacritty ~/.config
 }
 
@@ -34,4 +34,6 @@ if $nu.os-info.name == "windows" {
   cp -r config/nushell ~/.config
 }
 
-print "Manually update Firefox extensions"
+if $nu.os-info.name != "android" {
+  print "Manually update Firefox extensions"
+}

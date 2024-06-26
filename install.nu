@@ -1,13 +1,13 @@
-if (which cargo | is-empty) {
-  print "Install cargo manually"
-  exit 1
-}
 if (which rustc | is-empty) {
   print "Install rustc manually"
   exit 1
 }
 if (which rustup | is-empty) {
   print "Install rustup manually"
+  exit 1
+}
+if (which cargo | is-empty) {
+  print "Install cargo manually"
   exit 1
 }
 
@@ -23,7 +23,7 @@ cargo install --git https://github.com/helix-editor/helix helix-term
 let helix_config_path = if $nu.os-info.name == "windows" {
   ($env.APPDATA | path join helix/)
 } else {
-  (["/home", $env.USER, ".config/helix/"] | path join)
+  ([$env.HOME, ".config/helix/"] | path join)
 }
 
 if not ($helix_config_path | path join runtime/grammars | path exists) {
@@ -44,7 +44,6 @@ cargo install bat
 cargo install fd-find
 cargo install ripgrep
 cargo install tealdeer
-cargo install du-dust
 
 ## git
 if (which git | is-empty) {

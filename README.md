@@ -10,6 +10,11 @@ I use the *FantasqueSansM Nerd Font Mono [nerdfonts](https://www.nerdfonts.com/f
 
 > Some configs are in `~/.config/` (on Linux and MacOs) and in `%APPDATA%\` or `%LOCALAPPDATA%\` on Windows
 
+### Android
+
+You can use those config file on `Termux` you need to use `install_android.nu` instead
+(To set the terminal color and font you can use `Termux:Styling`)
+
 ## Development
 
 - **Terminal**: [alacritty](https://github.com/alacritty/alacritty) (also follow [rio](https://github.com/raphamorim/rio))
@@ -21,7 +26,6 @@ I use the *FantasqueSansM Nerd Font Mono [nerdfonts](https://www.nerdfonts.com/f
   [fd](https://github.com/sharkdp/fd) & 
   [ripgrep](https://github.com/BurntSushi/ripgrep) & 
   [tealdeer](https://github.com/dbrgn/tealdeer) & 
-  [dust](https://github.com/bootandy/dust) & 
   [delta](https://github.com/dandavison/delta) & 
   [difftastic](https://github.com/Wilfred/difftastic) 
   *(will look at zoxide)*
