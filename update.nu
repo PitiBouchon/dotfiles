@@ -1,4 +1,4 @@
-# ! Will overwrites config !
+# ! WILL OVERWRITES CONFIG !
 
 mkdir ~/.config
 
@@ -7,6 +7,13 @@ if $nu.os-info.name == "windows" {
   cp -r config/alacritty $env.APPDATA
 } else if $nu.os-info.name != "android" {
   cp -r config/alacritty ~/.config
+}
+
+# Nushell
+if $nu.os-info.name == "windows" {
+  cp -r config/nushell $env.APPDATA
+} else {
+  cp -r config/nushell ~/.config
 }
 
 # Zellij
@@ -26,14 +33,3 @@ if $nu.os-info.name == "windows" {
 
 # Git
 nu config/git/update.nu
-
-# Nushell
-if $nu.os-info.name == "windows" {
-  cp -r config/nushell $env.APPDATA
-} else {
-  cp -r config/nushell ~/.config
-}
-
-if $nu.os-info.name != "android" {
-  print "Manually update Firefox extensions"
-}

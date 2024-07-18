@@ -12,17 +12,9 @@ map ge scrollToBottom
 map gg scrollToTop
 
 # Tabs
-map << moveTabLeft
-map >> moveTabRight
 map <a-p> togglePinTab
 
 # Links
 map f LinkHints.activateMode
 map F LinkHints.activateModeToOpenInNewTab
 map yy copyCurrentUrl
-
-# Find
-map / enterFindMode
-map n performFind
-map N performBackwardsFind
-map <space> Vomnibar.activateTabSelection
