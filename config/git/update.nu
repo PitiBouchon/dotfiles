@@ -16,7 +16,9 @@ git config --global difftool.difftastic.cmd 'difft "$LOCAL" "$REMOTE"'
 git config --global pager.difftool true
 
 # aliases
+git config --global alias.rb rebase
 git config --global alias.st status
 git config --global alias.sw switch
+git config --global alias.loga "log --oneline --abbrev-commit --decorate --graph --all"
 git config --global alias.dft difftool
 git config --global alias.dlog "!f() { GIT_EXTERNAL_DIFF=difft git log -p --ext-diff $@; }; f"
