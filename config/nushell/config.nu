@@ -800,6 +800,20 @@ $env.config = {
 alias ll = ls -l
 alias la = ls -a
 alias cat = bat -pp
-alias cls = clear -a
+alias cdgr = cd (git rev-parse --show-toplevel)
 
 use ~/.cache/starship/init.nu
+
+if $nu.os-info.name != "windows" {
+    if "ZELLIJ" not-in $env {
+        if $env.ZELLIJ_AUTO_ATTACH? == "true" {
+            zellij attach --create
+        } else {
+            zellij
+        }
+
+        if $env.ZELLIJ_AUTO_EXIT? == "true" {
+            exit
+        }
+    }
+}

@@ -2,13 +2,14 @@
 
 ## Installation
 
-To install / update the tools, install `nu` *(`cargo install nu`)* and run `nu install.nu`
+To install / update the tools, install the Rust and `nu` *(`cargo install nu`)*. 
 
-To set the configs, run `nu update.nu`
+Then run `nu install.nu` to install tools
+And `nu update.nu` to update their configs
 
 I use the *FantasqueSansM Nerd Font Mono [nerdfonts](https://www.nerdfonts.com/font-downloads)* (set in the Alacritty config)
 
-> Configs are in `~/.config/` (on Linux and MacOs) and in `%APPDATA%\` or `%LOCALAPPDATA%\` on Windows
+> Configs are in `~/.config/` (on Linux and MacOS?) and in `%APPDATA%\` or `%LOCALAPPDATA%\` on Windows
 
 ### Android
 
@@ -18,7 +19,7 @@ On `Termux` use `install_android.nu` instead
 ## Development
 
 - **Terminal**: [alacritty](https://github.com/alacritty/alacritty) (also follow [rio](https://github.com/raphamorim/rio))
-  - **Multiplexer**: will look at [zellij](https://github.com/zellij-org/zellij) (but does not work well with nushell and does not run on windows)
+  - **Multiplexer**: [zellij](https://github.com/zellij-org/zellij) (waiting for the windows support to be fully cross-platform)
 - **Shell**: [nushell](https://github.com/nushell/nushell)
   - **Customization**: [starship](https://github.com/starship)
 - **IDE**: [Helix](https://helix-editor.com)
@@ -28,7 +29,6 @@ On `Termux` use `install_android.nu` instead
   [tealdeer](https://github.com/dbrgn/tealdeer) & 
   [delta](https://github.com/dandavison/delta) & 
   [difftastic](https://github.com/Wilfred/difftastic) 
-  *(will look at zoxide)*
 
 ## Daily
 

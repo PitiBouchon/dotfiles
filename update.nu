@@ -17,9 +17,9 @@ if $nu.os-info.name == "windows" {
 }
 
 # Zellij
-# if $nu.os-info.name != "windows" {
-#   cp -r config/zellij ~/.config
-# }
+if $nu.os-info.name != "windows" {
+  cp -r config/zellij ~/.config
+}
 
 # Starship
 cp config/starship/starship.toml ~/.config/starship.toml

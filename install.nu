@@ -9,7 +9,7 @@ if (which rustc | is-empty) or (which rustup | is-empty) or (which cargo | is-em
 
 # cargo install nu
 cargo install alacritty
-# if $nu.os-info.name != "windows" { cargo install zellij }
+if $nu.os-info.name != "windows" { cargo install zellij }
 cargo install starship --no-default-features --features "battery notify gix-faster" # So it does not need cmake to install
 
 ## - Helix -
