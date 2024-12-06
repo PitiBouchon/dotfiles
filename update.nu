@@ -23,8 +23,9 @@ if $nu.os-info.name == "windows" {
   cp -r config/nushell ~/.config
 }
 
+
 # Zellij
-if $nu.os-info.name != "windows" {
+if $nu.os-info.name != "windows" and $nu.os-info.name != "android" {
   cp -r config/zellij ~/.config
 }
 
