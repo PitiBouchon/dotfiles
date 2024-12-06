@@ -14,7 +14,7 @@ args = ["--login"]
 
 [fonts]
 family = "FantasqueSansM Nerd Font Mono"
-size = 14
+size = 30
 
 [navigation]
 mode = "Bookmark"

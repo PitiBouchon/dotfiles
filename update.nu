@@ -9,6 +9,13 @@ if $nu.os-info.name == "windows" {
   cp -r config/alacritty ~/.config
 }
 
+# Rio
+if $nu.os-info.name == "windows" {
+  cp -r config/rio $env.LOCALAPPDATA
+} else if $nu.os-info.name != "android" {
+  cp -r config/rio ~/.config
+}
+
 # Nushell
 if $nu.os-info.name == "windows" {
   cp -r config/nushell $env.APPDATA
