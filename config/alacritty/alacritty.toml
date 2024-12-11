@@ -1,5 +1,7 @@
+[general]
 import = ["~/.config/alacritty/catppuccin-macchiato.toml",]
 
+[terminal]
 shell = { program = "nu", args = ["--login",] }
 
 [font]
