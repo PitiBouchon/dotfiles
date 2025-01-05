@@ -6,7 +6,7 @@ shell = { program = "nu", args = ["--login",] }
 
 [font]
 normal = { family = "FantasqueSansM Nerd Font Mono", style = "Regular" }
-size = 20
+size = 15
 
 [cursor]
 style = { shape = "Beam", blinking = "Always" }
