@@ -41,3 +41,6 @@ if $nu.os-info.name == "windows" {
 
 # Git
 nu config/git/update.nu
+
+# Tealdeer
+tldr --update

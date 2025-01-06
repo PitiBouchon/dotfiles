@@ -8,12 +8,12 @@ if (which rustc | is-empty) or (which rustup | is-empty) or (which cargo | is-em
 # --- TOOLS ---
 
 # cargo install nu
-cargo install alacritty
-if $nu.os-info.name != "windows" { cargo install zellij }
-cargo install starship --no-default-features --features "battery notify gix-faster" # So it does not need cmake to install
+cargo install --locked alacritty
+if $nu.os-info.name != "windows" { cargo install --locked zellij }
+cargo install --locked starship --no-default-features --features "battery notify gix-faster" # So it does not need cmake to install
 
 ## - Helix -
-cargo install --git https://github.com/helix-editor/helix helix-term
+cargo install --locked --git https://github.com/helix-editor/helix helix-term
 
 hx --grammar fetch
 hx --grammar build
@@ -30,23 +30,23 @@ if not ($helix_config_path | path join runtime/queries | path exists) {
 
 # --- CLI ---
 
-cargo install bat
-cargo install fd-find
-cargo install ripgrep
-cargo install tealdeer
+cargo install --locked bat
+cargo install --locked fd-find
+cargo install --locked ripgrep
+cargo install --locked tealdeer
 
 ## - Git -
 if (which git | is-empty) {
   print "Install git manually"
 }
-cargo install git-delta
+cargo install --locked git-delta
 if $nu.os-info.name != "windows" {
-  cargo install difftastic # does not work on windows for some reason
+  cargo install --locked difftastic # does not work on windows for some reason
 }
 
 ## - Lsp -
 rustup component add rust-analyzer # rust
-cargo install taplo-cli # toml
+cargo install --locked taplo-cli # toml
 # cargo install --git https://github.com/wgsl-analyzer/wgsl-analyzer wgsl_analyzer # wgsl
 # cargo install --git https://github.com/Feel-ix-343/markdown-oxide.git # markdown
 # cargo install typst-lsp # typst
