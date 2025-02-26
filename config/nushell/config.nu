@@ -804,15 +804,10 @@ alias cdgr = cd (git rev-parse --show-toplevel)
 use ~/.cache/starship/init.nu
 
 if $nu.os-info.name != "windows" {
-    if "ZELLIJ" not-in $env {
-        if $env.ZELLIJ_AUTO_ATTACH? == "true" {
-            zellij attach --create
-        } else {
-            zellij
-        }
-
-        if $env.ZELLIJ_AUTO_EXIT? == "true" {
-            exit
-        }
+    if 'ZELLIJ' not-in ($env | columns) {
+        zellij attach -c
+    }
+    if 'ZELLIJ_AUTO_EXIT' in ($env | columns) and $env.ZELLIJ_AUTO_EXIT == 'true' {
+        exit
     }
 }
