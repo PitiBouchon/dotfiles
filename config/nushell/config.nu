@@ -23,7 +23,8 @@ $env.config = {
     footer_mode: "auto" # always, never, number_of_rows, auto
     buffer_editor: "hx" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     edit_mode: emacs # emacs, vi
-    use_kitty_protocol: true # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
+    # Disable kitty protocol for now because there is a bug with is
+    # use_kitty_protocol: true # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
     highlight_resolved_externals: true # true enables highlighting of external commands in the repl resolved by which.
 
     hooks: {
