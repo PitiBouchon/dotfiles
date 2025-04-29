@@ -53,7 +53,7 @@ mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
 # Zellij
-if $nu.os-info.name != "windows" {
+if $nu.os-info.name != "windows" and $nu.os-info.name != "android" {
     if 'ZELLIJ' not-in ($env | columns) {
         zellij attach -c
     }

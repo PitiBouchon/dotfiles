@@ -13,9 +13,6 @@ pkg install starship
 ## - Helix -
 pkg install helix
 
-hx --grammar fetch
-hx --grammar build
-
 let helix_config_path = ([$env.HOME, ".config/helix/"] | path join)
 if not ($helix_config_path | path join runtime/queries | path exists) {
   print (["Copy the runtime/ directory of https://github.com/helix-editor/helix into ", $helix_config_path] | str join)
@@ -39,3 +36,8 @@ pkg install taplo
 
 ## - Autocomplete -
 pkg install fish
+
+## - Autocomplete -
+if (which carapace | is-empty) {
+  print "You may install carapace manually (used for autocompletion)"
+}

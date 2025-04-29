@@ -44,3 +44,12 @@ cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git #
 if (which carapace | is-empty) {
   print "You may install carapace manually (used for autocompletion)"
 }
+
+let helix_config_path = if $nu.os-info.name == "windows" {
+  ($env.APPDATA | path join helix/)
+} else {
+  ([$env.HOME, ".config/helix/"] | path join)
+}
+if not ($helix_config_path | path join runtime/queries | path exists) {
+  print (["Copy the runtime/ directory of https://github.com/helix-editor/helix into ", $helix_config_path] | str join)
+}

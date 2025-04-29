@@ -48,12 +48,3 @@ tldr --update
 # Helix
 hx --grammar fetch
 hx --grammar build
-
-let helix_config_path = if $nu.os-info.name == "windows" {
-  ($env.APPDATA | path join helix/)
-} else {
-  ([$env.HOME, ".config/helix/"] | path join)
-}
-if not ($helix_config_path | path join runtime/queries | path exists) {
-  print (["Copy the runtime/ directory of https://github.com/helix-editor/helix into ", $helix_config_path] | str join)
-}
