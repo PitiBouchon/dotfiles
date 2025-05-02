@@ -36,9 +36,10 @@ if $nu.os-info.name != "windows" {
 ## - Lsp -
 rustup component add rust-analyzer # rust
 cargo install --locked taplo-cli # toml
+cargo install --locked just-cli # toml
 cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git # markdown
-# cargo install --git https://github.com/wgsl-analyzer/wgsl-analyzer wgsl_analyzer # wgsl
-# cargo install typst-lsp # typst
+# cargo install --locked --git https://github.com/wgsl-analyzer/wgsl-analyzer wgsl_analyzer # wgsl
+# cargo install --locked typst-lsp # typst
 
 ## - Autocomplete -
 if (which carapace | is-empty) {
