@@ -11,7 +11,7 @@ if (which rustc | is-empty) or (which rustup | is-empty) or (which cargo | is-em
 # cargo install --locked nu
 cargo install --locked alacritty
 if $nu.os-info.name != "windows" { cargo install --locked zellij }
-cargo install --locked starship --no-default-features --features "battery notify gix-faster" # So it does not need cmake to install
+cargo install --locked starship
 
 ## - Helix -
 cargo install --locked --git https://github.com/helix-editor/helix helix-term
@@ -36,7 +36,7 @@ if $nu.os-info.name != "windows" {
 ## - Lsp -
 rustup component add rust-analyzer # rust
 cargo install --locked taplo-cli # toml
-cargo install --locked just-cli # toml
+cargo install --locked just # toml
 cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git # markdown
 # cargo install --locked --git https://github.com/wgsl-analyzer/wgsl-analyzer wgsl_analyzer # wgsl
 # cargo install --locked typst-lsp # typst
