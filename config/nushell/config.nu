@@ -51,13 +51,3 @@ source ./catppuccin_macchiato.nu
 # Prompt
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
-
-# Zellij
-if $nu.os-info.name != "windows" and $nu.os-info.name != "android" {
-    if 'ZELLIJ' not-in ($env | columns) {
-        zellij attach -c
-    }
-    if 'ZELLIJ_AUTO_EXIT' in ($env | columns) and $env.ZELLIJ_AUTO_EXIT == 'true' {
-        exit
-    }
-}

@@ -16,6 +16,11 @@ if $nu.os-info.name == "windows" {
   cp -r config/rio ~/.config
 }
 
+# Rio
+if $nu.os-info.name == "linux" {
+  cp -r config/ghostty ~/.config
+}
+
 # Nushell
 if $nu.os-info.name == "windows" {
   cp -r config/nushell $env.APPDATA

@@ -18,8 +18,7 @@ On `Termux` use `install_android.nu` instead
 
 ## Development
 
-- **Terminal**: [alacritty](https://github.com/alacritty/alacritty) on Linux and [rio](https://github.com/raphamorim/rio) on Windows
-  - **Multiplexer**: [zellij](https://github.com/zellij-org/zellij) (waiting for the windows support to be fully cross-platform)
+- **Terminal**: [ghostty](https://github.com/ghostty-org/ghostty) on Linux and [rio](https://github.com/raphamorim/rio) on Windows
 - **Shell**: [nushell](https://github.com/nushell/nushell)
   - **Customization**: [starship](https://github.com/starship)
 - **IDE**: [Helix](https://helix-editor.com)
