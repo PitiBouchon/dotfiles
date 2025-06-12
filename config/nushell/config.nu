@@ -26,6 +26,7 @@ $env.config = {
     # Disable kitty protocol for now because there is a bug with is
     # use_kitty_protocol: true # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
     highlight_resolved_externals: true # true enables highlighting of external commands in the repl resolved by which.
+    show_banner: false # remove welcome message
 
     hooks: {
         pre_prompt: [{ || 
@@ -48,6 +49,6 @@ alias cdgr = cd (git rev-parse --show-toplevel)
 # Theme
 source ./catppuccin_macchiato.nu
 
-# Prompt
+# Starship prompt
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
