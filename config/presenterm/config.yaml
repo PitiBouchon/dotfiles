@@ -1,0 +1,7 @@
+defaults:
+  theme: catppuccin-macchiato
+
+typst:
+  # the pixels per inch when rendering latex/typst formulas.
+  ppi: 300
+

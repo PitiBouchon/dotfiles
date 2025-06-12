@@ -16,7 +16,7 @@ if $nu.os-info.name == "windows" {
   cp -r config/rio ~/.config
 }
 
-# Rio
+# Ghostty
 if $nu.os-info.name == "linux" {
   cp -r config/ghostty ~/.config
 }
@@ -46,6 +46,13 @@ if $nu.os-info.name == "windows" {
 
 # Git
 nu config/git/update.nu
+
+# Presenterm
+if $nu.os-info.name == "windows" {
+  cp -r config/presenterm/config.yaml ($env.APPDATA | path join config/)
+} else {
+  cp -r config/presenterm ~/.config
+}
 
 # Tealdeer
 tldr --update

@@ -32,7 +32,7 @@ cargo install --locked ripgrep
 cargo install --locked tealdeer
 cargo install --locked typst-cli
 cargo install --locked tokei
-cargo install --locked presenterm
+cargo install --locked presenterm --features sixel # enable sixel protocol
 cargo install --locked wiki-tui
 
 ## - Git -
