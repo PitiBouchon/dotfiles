@@ -49,7 +49,8 @@ nu config/git/update.nu
 
 # Presenterm
 if $nu.os-info.name == "windows" {
-  cp -r config/presenterm/config.yaml ($env.APPDATA | path join config/)
+  mkdir ($env.APPDATA | path join presenterm/config/)
+  cp -r config/presenterm/config.yaml ($env.APPDATA | path join presenterm/config/)
 } else {
   cp -r config/presenterm ~/.config
 }

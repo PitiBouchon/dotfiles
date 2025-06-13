@@ -32,7 +32,11 @@ cargo install --locked ripgrep
 cargo install --locked tealdeer
 cargo install --locked typst-cli
 cargo install --locked tokei
-cargo install --locked presenterm --features sixel # enable sixel protocol
+if $nu.os-info.name == "linux" {
+  cargo install --locked presenterm --features sixel # enable sixel protocol
+} else {
+  cargo install --locked presenterm
+}
 cargo install --locked wiki-tui
 
 ## - Git -
