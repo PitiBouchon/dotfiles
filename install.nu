@@ -56,6 +56,7 @@ cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git #
 cargo install --locked typst-lsp # typst
 cargo install --locked --git https://github.com/wgsl-analyzer/wgsl-analyzer wgsl_analyzer # wgsl
 cargo install --locked --git https://github.com/astral-sh/uv uv # python
+cargo install --locked harper-ls # git commit
 
 ## - Autocomplete -
 if (which go) {

@@ -21,3 +21,7 @@ workspace.symbol.search.kind = "all_symbols"
 workspace.symbol.search.scope = "workspace_and_dependencies"
 
 diagnostics.disabled = ["unresolved-proc-macro"]
+
+[[language]]
+name = "git-commit"
+language-servers = [ "harper-ls" ]
