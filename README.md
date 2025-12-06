@@ -1,3 +1,5 @@
+# ! :warning: TRANSFERRED TO https://codeberg.org/ptibouchon/dotfiles :warning: !
+
 # Config Files
 
 ## Installation
