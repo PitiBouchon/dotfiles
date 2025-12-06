@@ -263,7 +263,7 @@ copy_command "wl-copy"                    // wayland
 
 copy_on_select true
 
-scrollback_editor "~/.cargo/bin/hx"
+scrollback_editor "/home/linuxbrew/.linuxbrew/bin/hx"
 
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals

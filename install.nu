@@ -5,71 +5,48 @@ if (which rustc | is-empty) or (which rustup | is-empty) or (which cargo | is-em
   exit 1
 }
 
+if (which brew | is-empty) {
+  print "Install homebrew manually"
+  exit 1
+}
 
 # --- TOOLS ---
 
-cargo install --locked nu
-if $nu.os-info.name != "windows" and (which ghostty | is-empty) {
-  print "Install Ghostty manually"
-} else {
-  cargo install --locked rioterm
-}
-cargo install --locked starship
-
-# unused
-# cargo install --locked alacritty
-# if $nu.os-info.name != "windows" { cargo install --locked zellij }
+brew install starship
+brew install zellij
 
 ## - Helix -
-cargo install --locked --git https://github.com/helix-editor/helix helix-term
+brew install helix
 
 
 # --- CLI ---
 
-cargo install --locked bat
-cargo install --locked fd-find
-cargo install --locked ripgrep
-cargo install --locked tealdeer
-cargo install --locked typst-cli
-cargo install --locked tokei
-if $nu.os-info.name == "linux" {
-  cargo install --locked presenterm --features sixel # enable sixel protocol
-} else {
-  cargo install --locked presenterm
-}
-cargo install --locked wiki-tui
+brew install bat
+brew install fd
+brew install ripgrep
+brew install tealdeer
+brew install typst
+brew install tokei
+brew install presenterm
+brew install dust
+brew install yazi
 
 ## - Git -
 if (which git | is-empty) {
   print "Install git manually"
 }
-cargo install --locked git-delta
-if $nu.os-info.name != "windows" {
-  cargo install --locked difftastic # does not work on windows for some reason
-}
+brew install git-delta
+brew install difftastic
 
 ## - Lsp -
 rustup component add rust-analyzer # rust
-cargo install --locked taplo-cli # toml
-cargo install --locked just # toml
-cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git # markdown
-cargo install --locked typst-lsp # typst
-cargo install --locked --git https://github.com/wgsl-analyzer/wgsl-analyzer wgsl_analyzer # wgsl
-cargo install --locked --git https://github.com/astral-sh/uv uv # python
-cargo install --locked harper-ls # git commit
+brew install taplo # toml
+brew install just
+brew install markdown-oxide # markdown
+brew install harper # git commit
+# cargo install --locked typst-lsp # typst
+# cargo install --locked --git https://github.com/wgsl-analyzer/wgsl-analyzer wgsl_analyzer # wgsl
+# cargo install --locked --git https://github.com/astral-sh/uv uv # python
 
 ## - Autocomplete -
-if (which go) {
-  go install github.com/carapace-sh/carapace-bin@latest
-} else {
-  print "You may install carapace manually (used for autocompletion)"
-}
-
-let helix_config_path = if $nu.os-info.name == "windows" {
-  ($env.APPDATA | path join helix/)
-} else {
-  ([$env.HOME, ".config/helix/"] | path join)
-}
-if not ($helix_config_path | path join runtime/queries | path exists) {
-  print (["Copy the runtime/ directory of https://github.com/helix-editor/helix into ", $helix_config_path] | str join)
-}
+brew install carapace
